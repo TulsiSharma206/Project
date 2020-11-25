@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <h3>{{ user.username|capfirst}}</h3>
+     {% if user.Designation %}
+         <p>Designation: {{ user.Designation }}</p>
+     {% endif %}    
+     {% if user.Email %}
+         <p>Email: {{ user.Email }}</p>
+     {% endif %} 
+     {% if user.phone_number  %}
+         <p>Phone_number: {{ user.phone_number }}</p>
+     {% endif %} 
+    {% if user.sex %}
+    <p>Gender: {% if user.sex == 'F'%}Female
+               {% else %}{{ user.sex}}
+               {% endif %}
+    {% endif %}  
+</div>
+{% endblock %}
