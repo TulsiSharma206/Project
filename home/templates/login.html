@@ -1,21 +1,24 @@
 {% extends "base.html" %}
-
 {% block content %}
 <div>
-    <h3>{{ user.username|capfirst}}</h3>
-     {% if user.Designation %}
-         <p>Designation: {{ user.Designation }}</p>
-     {% endif %}    
-     {% if user.Email %}
-         <p>Email: {{ user.Email }}</p>
-     {% endif %} 
-     {% if user.phone_number  %}
-         <p>Phone_number: {{ user.phone_number }}</p>
-     {% endif %} 
-    {% if user.sex %}
-    <p>Gender: {% if user.sex == 'F'%}Female
-               {% else %}{{ user.sex}}
-               {% endif %}
-    {% endif %}  
-</div>
+    <h3>Login as:{{ U.username|capfirst}}</h3>
+    <p>{{ H.username|capfirst}}<p>
+        {% if H.Designation %}
+                <p>Designation: {{ H.Designation }}</p>
+        {% endif %}    
+        {% if H.Email %}
+                    <p>Email: {{ H.Email }}</p>
+        {% endif %} 
+        {% if H.Phone_number  %}
+                    <p>Phone_number: {{ H.Phone_number }}</p>
+        {% endif %} 
+        {% if H.sex %}
+            <p>Gender: {% if H.sex == 'F'%}Female
+              {% else %} Male
+              {% endif %}
+         {% endif %} 
+         <div>
+            <a rel="nofollow" href="calendar/1">CALENDAR</a>
+         </div>  
+</div>       
 {% endblock %}

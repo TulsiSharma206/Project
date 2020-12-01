@@ -9,8 +9,7 @@
 </style>
 </head>
 <body>
-{% csrf_token %}
-<form action="" method="POST">
+<form action="" method="POST" name="check">
     {% csrf_token %}
     <div class="myDiv">
       <label for="uname"><b>Username</b></label>
@@ -19,5 +18,9 @@
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
        <br><br>
-      <button type="submit">Login</button>
+      <input type="submit" name="Signin" value="Signin">
+      
   </form> 
+  
+   </body>     
+  </html>
